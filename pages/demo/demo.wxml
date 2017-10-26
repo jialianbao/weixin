@@ -1,0 +1,19 @@
+<!--pages/demo/demo.wxml-->
+<view class='container'>
+  <text>手写内容没有其他东西</text>
+  <view class='content'>
+    <block wx:for="{{demo}}" wx:for-item="log">
+      <text>{{index + 1}}. {{log.one}}</text>
+    </block>
+  </view>
+</view>
+
+<template name="staffName">
+  <view>
+    FirstName: {{firstName}}, LastName: {{lastName}}
+  </view>
+</template>
+
+<template is="staffName" data="{{...staffA}}"></template>
+<template is="staffName" data="{{...staffB}}"></template>
+<template is="staffName" data="{{...staffC}}"></template>

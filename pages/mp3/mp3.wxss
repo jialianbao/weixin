@@ -1,0 +1,8 @@
+@import "/wxSearch/wxSearch.wxss";
+
+.clear{
+  position: absolute;
+  top: 0.45rem;
+  right: 4rem;
+  z-index: 99;
+}

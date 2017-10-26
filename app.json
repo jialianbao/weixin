@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/demo/demo",
+    "pages/swiper/swiper",
+    "pages/swiper2/swiper2",
+    "pages/mp3/mp3",
+    "pages/tab/tab",
+    "pages/joke/joke"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "rgba(0,0,0,0.05)",
+    "navigationBarTitleText": "宝宝-demo",
+    "navigationBarTextStyle": "black"
+  }
+}

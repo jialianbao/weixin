@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+    <!-- sample.wxml -->
+    <!-- <view class="btn-area">
+        <navigator url="../demo/demo?title=navigate" hover-class="navigator-hover">跳转到新页面</navigator> 
+        <navigator url="../demo/demo?title=redirect" open-type="redirect" hover-class="other-navigator-hover">在当前页打开页面无后退</navigator>
+      <navigator url="../demo/demo" open-type="switchTab" hover-class="other-navigator-hover">点击后无效果切换 Tab</navigator> 
+    </view> -->
+  <!-- 分类导航 -->
+  <view class="nav-block wrap">
+    <block wx:for="{{navItems}}"> 
+      <view class="wrap-item {{item.isSplot ? 'exp' : ''}}">  
+         <navigator url="../{{item.url}}/{{item.url}}" hover-class="navigator-hover">{{item.name}}</navigator> 
+      </view>
+    </block>
+  </view>
+</view>
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab%3==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">内容1</view>
+  <view class="swiper-tab-list {{currentTab%3==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">内容2</view>
+  <view class="swiper-tab-list {{currentTab%3==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">内容3</view>
+</view>
+<swiper current="{{currentTab}}" circular="true" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <swiper-item>
+    <view>内容1</view>
+  </swiper-item>
+  <swiper-item>
+    <view>内容2</view>
+  </swiper-item>
+  <swiper-item>
+    <view>内容3</view>
+  </swiper-item>
+</swiper>

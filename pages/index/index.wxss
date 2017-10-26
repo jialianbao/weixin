@@ -1,0 +1,88 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-area{
+  box-sizing: border-box;
+  padding: 30rpx;
+  font-size:30rpx;
+  color:#999;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;  
+  margin: 20rpx;
+  /* border-radius: 50%; */
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+.user-motto{
+  color: red;
+}
+.usermotto {
+  margin-top: 200px;
+}
+/** 修改默认的navigator点击态 **/
+.navigator-hover {
+    color:blue;
+}
+/** 自定义其他点击态样式类 **/
+.other-navigator-hover {
+    color:red;
+}
+
+.wrap-item.exp{
+  color: red;
+}
+.my-swiper image{
+  width: 100%;
+}
+.nav-block.wrap{
+  width: 100%;
+  box-sizing: border-box;
+  border-right: 1px solid #ddd;
+  display: block;
+	margin-top: .8rem;
+  border-top:1px solid #ddd;
+}
+.wrap-item{
+	display: inline-block;
+	width: 33.33%; 
+  box-sizing: border-box;
+	height: 6rem;
+	line-height: 6rem;
+	border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+	background-color: #fff;
+	text-align: center;
+}
+
+.swiper-tab{
+  width: 100%; 
+  border-bottom: 2rpx solid #777777; 
+  text-align: center; 
+  line-height: 80rpx;
+}
+.swiper-tab-list{
+  font-size: 30rpx; 
+  display: inline-block; 
+  width: 20%; 
+  color: #777777; 
+}
+.on{
+  color: #da7c0c; 
+  border-bottom: 5rpx solid #da7c0c;
+}
+.swiper-box{ 
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+ }
+.swiper-box view{ 
+  text-align: center; 
+}

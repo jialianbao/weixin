@@ -1,0 +1,12 @@
+/* pages/demo/demo.wxss */
+.content{
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+}
+.content text{
+  width: 100%;
+  display: block;
+  text-align: left
+}

@@ -1,0 +1,24 @@
+<!--pages/mp3/mp3.wxml-->
+<!-- <view class='container'>
+  <text>mp3/mp3</text>
+</view> -->
+
+<import src="/wxSearch/wxSearch.wxml"/>
+
+<view class="wxSearch-section">
+  <view class="wxSearch-pancel">
+    <input bindinput="wxSearchInput" bindfocus="wxSerchFocus" value="{{wxSearchData.value}}" bindblur="wxSearchBlur" class="wxSearch-input" placeholder="请输入歌曲ID" />
+    <icon class='clear' bindtap='searchActiveChangeclear' wx:if="{{search.showClearBtn}}" type="clear" size="20"/>
+    <button class="wxSearch-button" bindtap="wxSearchFn" size="mini" plain="true">搜索</button>
+  </view>
+</view>
+<template is="wxSearch" data="{{wxSearchData}}"/>
+
+<view class='wx_music'>
+  <block wx:for="{{musicList}}" wx:for-item="log">
+        <view class='content'>
+          <text>{{index + 1}}. {{log.content}}</text>
+          
+        </view>
+      </block>
+</view>

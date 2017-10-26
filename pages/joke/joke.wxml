@@ -1,0 +1,28 @@
+<!--pages/demo/demo.wxml-->
+<!-- bindscrolltolower="getMore"   scrp;;-view的上拉加载 -->
+<scroll-view scroll-y="true" scroll-top="{{scrollTop}}" bindscroll="scroll" style="position:absolute; top:0; left:0; right:0; bottom:0;">
+  <view class='body' style=''>
+    <text bindtap="refresh" class='refresh'>刷新</text>
+    <view class='refresh_top'></view>
+    <view class='container result-item'>
+      <block wx:for="{{demo}}" wx:for-item="log">
+        <view class='content'>
+          <text>{{index + 1}}. {{log.content}}</text>
+          <image src="{{ log.url }}" bindload="imageLoad" data-title='{{ log.url }}' bindlongtap='imgDownload' data-index="{{ index }}" 
+    style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view bindtap="getMore" wx:if="{{hasMore}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;margin:40rpx 0;">
+    <text>点击加载更多...</text>
+    <icon type="waiting" size="20"/>
+  </view>
+  <view wx:else><text>没有更多内容了</text></view> 
+</scroll-view>
+
+<view class="widget-goTop" bindtap="goTop" wx:if="{{ floorstatus }}">
+  <view class="gotop-wrap">
+    <view class="icon icon-top"></view> <view>顶部</view>
+  </view>
+</view>

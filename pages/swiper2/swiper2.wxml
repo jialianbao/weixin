@@ -1,0 +1,10 @@
+<!--pages/swiper/swiper.wxml-->
+<view class="swiper_box">
+  <swiper class='swiper' indicator-dots="{{indicatorDots}}" indicator-color='{{color}}' indicator-active-color='{{a_color}}' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{img}}" wx:for-item="log">
+      <swiper-item>
+        <image src='{{log}}'/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
